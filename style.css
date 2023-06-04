@@ -1,0 +1,53 @@
+body {
+    background-color: #222;
+  }
+  
+  .clock {
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    margin: 200px auto;
+    color: #fff;
+  }
+  
+  .clock:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(to right, #7b9fe7, #9456e0);
+    z-index: -1;
+    opacity: 0.2;
+  }
+  
+  #time {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #ampm,
+  #date {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ccc;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .clock,
+  .clock:before,
+  #ampm,
+  #date {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
